@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TexSauce - Free Media Hub</title>
+    <meta name="description"
+        content="Your gateway to free media, knowledge, and resources. A comprehensive directory of tools, content, and learning materials.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- HUD Overlay Elements -->
+    <div class="hud-overlay">
+        <!-- Top Left Status -->
+        <div class="hud-corner top-left">
+            <div class="hud-label">SYSTEM STATUS</div>
+            <div class="status-indicator">
+                <span class="status-dot"></span>
+                <span>ONLINE</span>
+            </div>
+            <div class="hud-info">ENCRYPTION: ACTIVE</div>
+        </div>
+
+        <!-- Top Right Controls -->
+        <div class="hud-corner top-right">
+            <div class="hud-label">SEARCH DATABASE</div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Enter query..." class="search-input">
+                <div class="search-icon">⌕</div>
+            </div>
+            <button id="themeToggle" class="theme-toggle">
+                <span class="theme-icon">◐</span>
+            </button>
+        </div>
+
+        <!-- Bottom Left Terminal -->
+        <div class="hud-corner bottom-left">
+            <div class="terminal">
+                <div class="terminal-line">> INITIALIZING SYSTEM...</div>
+                <div class="terminal-line">> LOADING RESOURCES...</div>
+                <div class="terminal-line">> CONNECTION ESTABLISHED</div>
+                <div class="terminal-line terminal-cursor">> READY_</div>
+            </div>
+        </div>
+
+        <!-- Bottom Right Info -->
+        <div class="hud-corner bottom-right">
+            <div class="hud-info">TEXSAUCE v1.0</div>
+            <div class="hud-info">PROPERTY OF: PUBLIC DOMAIN</div>
+            <div class="coordinates">
+                COORD: <span id="mouseCoords">0, 0</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="scanline"></div>
+        <div class="grid-overlay"></div>
+
+        <div class="hero-content">
+            <h1 class="glitch-text" data-text="TEXSAUCE">TEXSAUCE</h1>
+            <p class="subtitle">FREE MEDIA HUB // KNOWLEDGE BASE // RESOURCE DIRECTORY</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-value">500+</div>
+                    <div class="stat-label">RESOURCES</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">24/7</div>
+                    <div class="stat-label">ACCESS</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">∞</div>
+                    <div class="stat-label">POSSIBILITIES</div>
+                </div>
+            </div>
+            <button class="cta-button">
+                <span>ENTER ARCHIVE</span>
+                <div class="button-glow"></div>
+            </button>
+        </div>
+    </section>
+
+    <!-- Categories Grid -->
+    <section class="categories" id="categories">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span class="title-bracket">[</span>
+                RESOURCE ARCHIVES
+                <span class="title-bracket">]</span>
+            </h2>
+            <div class="section-subtitle">SELECT YOUR CATEGORY</div>
+        </div>
+
+        <div class="categories-grid">
+            <!-- Gaming Category -->
+            <div class="category-card" data-category="gaming">
+                <div class="card-corner tl"></div>
+                <div class="card-corner tr"></div>
+                <div class="card-corner bl"></div>
+                <div class="card-corner br"></div>
+
+                <div class="card-header">
+                    <div class="card-icon">🎮</div>
+                    <div class="card-label">SECTOR-01</div>
+                </div>
+
+                <h3 class="card-title">Gaming</h3>
+                <p class="card-description">
+                    Free games, ROMs, emulators, gaming tools, and communities.
+                    Everything you need for gaming across all platforms.
+                </p>
+
+                <div class="card-stats">
+                    <span class="stat">50+ Resources</span>
+                    <span class="stat-dot">●</span>
+                    <span class="stat">Updated Daily</span>
+                </div>
+
+                <button class="card-button">
+                    <span>ACCESS</span>
+                    <span class="button-arrow">→</span>
+                </button>
+            </div>
+
+            <!-- Reading Category -->
+            <div class="category-card" data-category="reading">
+                <div class="card-corner tl"></div>
+                <div class="card-corner tr"></div>
+                <div class="card-corner bl"></div>
+                <div class="card-corner br"></div>
+
+                <div class="card-header">
+                    <div class="card-icon">📚</div>
+                    <div class="card-label">SECTOR-02</div>
+                </div>
+
+                <h3 class="card-title">Reading</h3>
+                <p class="card-description">
+                    Access millions of books, comics, manga, and magazines.
+                    Digital libraries at your fingertips.
+                </p>
+
+                <div class="card-stats">
+                    <span class="stat">75+ Resources</span>
+                    <span class="stat-dot">●</span>
+                    <span class="stat">All Formats</span>
+                </div>
+
+                <button class="card-button">
+                    <span>ACCESS</span>
+                    <span class="button-arrow">→</span>
+                </button>
+            </div>
+
+            <!-- Downloading Category -->
+            <div class="category-card" data-category="downloading">
+                <div class="card-corner tl"></div>
+                <div class="card-corner tr"></div>
+                <div class="card-corner bl"></div>
+                <div class="card-corner br"></div>
+
+                <div class="card-header">
+                    <div class="card-icon">⬇️</div>
+                    <div class="card-label">SECTOR-03</div>
+                </div>
+
+                <h3 class="card-title">Downloading</h3>
+                <p class="card-description">
+                    Direct download sites, file hosts, and download managers.
+                    Fast and reliable content delivery.
+                </p>
+
+                <div class="card-stats">
+                    <span class="stat">60+ Resources</span>
+                    <span class="stat-dot">●</span>
+                    <span class="stat">High Speed</span>
+                </div>
+
+                <button class="card-button">
+                    <span>ACCESS</span>
+                    <span class="button-arrow">→</span>
+                </button>
+            </div>
+
+            <!-- Torrenting Category -->
+            <div class="category-card" data-category="torrenting">
+                <div class="card-corner tl"></div>
+                <div class="card-corner tr"></div>
+                <div class="card-corner bl"></div>
+                <div class="card-corner br"></div>
+
+                <div class="card-header">
+                    <div class="card-icon">🌊</div>
+                    <div class="card-label">SECTOR-04</div>
+                </div>
+
+                <h3 class="card-title">Torrenting</h3>
+                <p class="card-description">
+                    Torrent sites, clients, and utilities. P2P file sharing
+                    with complete guides and safety tips.
+                </p>
+
+                <div class="card-stats">
+                    <span class="stat">40+ Resources</span>
+                    <span class="stat-dot">●</span>
+                    <span class="stat">Secure</span>
+                </div>
+
+                <button class="card-button">
+                    <span>ACCESS</span>
+                    <span class="button-arrow">→</span>
+                </button>
+            </div>
+
+            <!-- Educational Category -->
+            <div class="category-card" data-category="educational">
+                <div class="card-corner tl"></div>
+                <div class="card-corner tr"></div>
+                <div class="card-corner bl"></div>
+                <div class="card-corner br"></div>
+
+                <div class="card-header">
+                    <div class="card-icon">🎓</div>
+                    <div class="card-label">SECTOR-05</div>
+                </div>
+
+                <h3 class="card-title">Educational</h3>
+                <p class="card-description">
+                    Free courses, tutorials, academic papers, and learning resources.
+                    Knowledge without barriers.
+                </p>
+
+                <div class="card-stats">
+                    <span class="stat">85+ Resources</span>
+                    <span class="stat-dot">●</span>
+                    <span class="stat">Certified</span>
+                </div>
+
+                <button class="card-button">
+                    <span>ACCESS</span>
+                    <span class="button-arrow">→</span>
+                </button>
+            </div>
+
+            <!-- Mobile Category -->
+            <div class="category-card" data-category="mobile">
+                <div class="card-corner tl"></div>
+                <div class="card-corner tr"></div>
+                <div class="card-corner bl"></div>
+                <div class="card-corner br"></div>
+
+                <div class="card-header">
+                    <div class="card-icon">📱</div>
+                    <div class="card-label">SECTOR-06</div>
+                </div>
+
+                <h3 class="card-title">Android / iOS</h3>
+                <p class="card-description">
+                    Mobile apps, games, utilities, and customization tools.
+                    Everything for your mobile device.
+                </p>
+
+                <div class="card-stats">
+                    <span class="stat">55+ Resources</span>
+                    <span class="stat-dot">●</span>
+                    <span class="stat">Both OS</span>
+                </div>
+
+                <button class="card-button">
+                    <span>ACCESS</span>
+                    <span class="button-arrow">→</span>
+                </button>
+            </div>
+
+            <!-- Linux/macOS Category -->
+            <div class="category-card" data-category="os">
+                <div class="card-corner tl"></div>
+                <div class="card-corner tr"></div>
+                <div class="card-corner bl"></div>
+                <div class="card-corner br"></div>
+
+                <div class="card-header">
+                    <div class="card-icon">🐧</div>
+                    <div class="card-label">SECTOR-07</div>
+                </div>
+
+                <h3 class="card-title">Linux / macOS</h3>
+                <p class="card-description">
+                    Unix-based system resources, tools, and software.
+                    For power users and developers.
+                </p>
+
+                <div class="card-stats">
+                    <span class="stat">45+ Resources</span>
+                    <span class="stat-dot">●</span>
+                    <span class="stat">Open Source</span>
+                </div>
+
+                <button class="card-button">
+                    <span>ACCESS</span>
+                    <span class="button-arrow">→</span>
+                </button>
+            </div>
+
+            <!-- Streaming Category -->
+            <div class="category-card" data-category="streaming">
+                <div class="card-corner tl"></div>
+                <div class="card-corner tr"></div>
+                <div class="card-corner bl"></div>
+                <div class="card-corner br"></div>
+
+                <div class="card-header">
+                    <div class="card-icon">🎬</div>
+                    <div class="card-label">SECTOR-08</div>
+                </div>
+
+                <h3 class="card-title">Streaming</h3>
+                <p class="card-description">
+                    Movies, TV shows, anime, and live streams.
+                    Watch content from anywhere, anytime.
+                </p>
+
+                <div class="card-stats">
+                    <span class="stat">70+ Resources</span>
+                    <span class="stat-dot">●</span>
+                    <span class="stat">HD Quality</span>
+                </div>
+
+                <button class="card-button">
+                    <span>ACCESS</span>
+                    <span class="button-arrow">→</span>
+                </button>
+            </div>
+
+            <!-- Tools Category -->
+            <div class="category-card" data-category="tools">
+                <div class="card-corner tl"></div>
+                <div class="card-corner tr"></div>
+                <div class="card-corner bl"></div>
+                <div class="card-corner br"></div>
+
+                <div class="card-header">
+                    <div class="card-icon">🛠️</div>
+                    <div class="card-label">SECTOR-09</div>
+                </div>
+
+                <h3 class="card-title">Tools & Utilities</h3>
+                <p class="card-description">
+                    Productivity tools, converters, editors, and essential utilities.
+                    Your digital toolkit.
+                </p>
+
+                <div class="card-stats">
+                    <span class="stat">90+ Resources</span>
+                    <span class="stat-dot">●</span>
+                    <span class="stat">Verified</span>
+                </div>
+
+                <button class="card-button">
+                    <span>ACCESS</span>
+                    <span class="button-arrow">→</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h4>About TexSauce</h4>
+                <p>A comprehensive, community-driven directory of free media, tools, and educational resources.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#">Changelog</a></li>
+                    <li><a href="#">Glossary</a></li>
+                    <li><a href="#">Backups</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Community</h4>
+                <ul>
+                    <li><a href="https://github.com/gagankishoreint-glitch/TexSauce" target="_blank">GitHub</a></li>
+                    <li><a href="#">Discord</a></li>
+                    <li><a href="#">Reddit</a></li>
+                    <li><a href="#">Contribute</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TexSauce. Open Source & Community Driven.</p>
+            <p>SIGNAL: NORMAL // ENCRYPTION: QUANTUM-PHASE // STATUS: OPERATIONAL</p>
+        </div>
+    </footer>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+    </div>
+
+    <script src="resources.js"></script>
+    <script src="modal.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
