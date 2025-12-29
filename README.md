@@ -132,17 +132,6 @@ Modify animation speeds in `styles.css`:
 --transition-slow: 0.5s ease;
 ```
 
-## 🌟 Roadmap
-
-- [ ] Add actual resource links for each category
-- [ ] Implement modal popups with detailed resource lists
-- [ ] Create individual category pages
-- [ ] Add sorting/filtering options
-- [ ] Integrate with FMHY API (if available)
-- [ ] Add user favorites/bookmarks (localStorage)
-- [ ] Implement PWA features
-- [ ] Add sound effects (optional toggle)
-
 ## 🤝 Contributing
 
 Contributions are welcome! Here's how:
